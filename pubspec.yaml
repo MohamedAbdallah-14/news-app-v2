@@ -33,6 +33,7 @@ dependencies:
 dev_dependencies:
   bloc_test: ^9.1.6
   build_runner: ^2.4.8
+  flutter_flavorizr: ^2.2.2
   flutter_gen_runner: ^5.4.0
   flutter_lints: ^3.0.0
   flutter_test:
@@ -55,6 +56,32 @@ flutter_gen:
   integrations:
     flutter_svg: true
 
+flavorizr:
+  app:
+    android:
+      flavorDimensions: "flavor-type"
 
+  flavors:
+    production:
+      app:
+        name: "News App"
+      android:
+        applicationId: "com.abdallah.news_app"
+      ios:
+        bundleId: "com.abdallah.news_app"
 
+    dev:
+      app:
+        name: "News App Dev"
+      android:
+        applicationId: "com.abdallah.news_app.dev"
+      ios:
+        bundleId: "com.abdallah.news_app.dev"
 
+    mock:
+      app:
+        name: "News App Mock"
+      android:
+        applicationId: "com.abdallah.news_app.mock"
+      ios:
+        bundleId: "com.abdallah.news_app.mock"
