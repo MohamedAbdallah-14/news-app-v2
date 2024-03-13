@@ -1,0 +1,22 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "name": "news_model",
+  "response_model": false,
+  "parameters": [
+    {
+      "parameter": "headlines",
+      "field": "headlines",
+      "type": "HeadlineModel",
+      "custom": true,
+      "list": true
+    },
+    {
+      "parameter": "category",
+      "field": "category",
+      "type": "String",
+      "custom": false,
+      "list": false
+    }
+  ]
+}
