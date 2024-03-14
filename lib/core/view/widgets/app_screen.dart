@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/core/helpers/app_colors.dart';
 
 class AppScreen extends StatelessWidget {
   const AppScreen({
@@ -17,7 +18,7 @@ class AppScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      backgroundColor: backgroundColor ?? AppColors.background,
       appBar: appBar,
       body: child,
       bottomNavigationBar: bottomNavigationBar,

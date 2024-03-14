@@ -50,7 +50,6 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ],
       child: AppScreen(
-        backgroundColor: AppColors.background,
         child: Column(
           children: [
             Container(
