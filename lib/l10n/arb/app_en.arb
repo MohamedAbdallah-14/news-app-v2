@@ -8,5 +8,7 @@
   "check_your_connection": "Check your connection and try again.",
   "try_again_later": "Please try again later",
   "retry": "Retry",
-  "dismiss": "Dismiss"
+  "dismiss": "Dismiss",
+  "news": "News",
+  "favorite": "Favorite"
 }

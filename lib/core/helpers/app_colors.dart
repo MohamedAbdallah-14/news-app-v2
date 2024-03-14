@@ -27,6 +27,9 @@ class AppColors {
   static const lightBlueGrey = Color(0xffc5cee0);
 
   static const darkGray = Color(0xff202020);
+  static const darkGrayII = Color(0xff474747);
+  static const darkGrayIII = Color(0xff363636);
+  static const darkGrayIV = Color(0xff242424);
   static const brightGray = Color(0xff909090);
   static const mossyGreen = Color(0xff6d972e);
 }

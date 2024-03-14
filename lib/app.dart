@@ -10,6 +10,7 @@ import 'package:news_app/core/dependacy_injection/di.dart';
 import 'package:news_app/core/logic/language_cubit/language_cubit.dart';
 import 'package:news_app/core/view/app.dart';
 import 'package:news_app/flavor.dart';
+import 'package:news_app/home/logic/news/news_cubit.dart';
 import 'package:path_provider/path_provider.dart';
 
 Future<void> startApp(Flavor flavor) async {
@@ -34,6 +35,9 @@ Future<void> startApp(Flavor flavor) async {
       providers: [
         BlocProvider(
           create: (context) => LanguageCubit(),
+        ),
+        BlocProvider(
+          create: (context) => NewsCubit(di()),
         ),
       ],
       child: const App(),
