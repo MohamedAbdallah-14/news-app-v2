@@ -1,6 +1,3 @@
-import 'dart:io';
-
-final testMode = Platform.environment.containsKey('FLUTTER_TEST');
 bool get liveEnvironment => AppFlavor.instance.flavor == Flavor.production;
 bool get devEnvironment => AppFlavor.instance.flavor == Flavor.dev;
 bool get mockEnvironment => AppFlavor.instance.flavor == Flavor.mock;
