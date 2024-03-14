@@ -9,7 +9,7 @@ class NewsModelMock {
   //*this return the !different! instance every time it's called
   static NewsModel get random => NewsModel(
         headlines: HeadlineModelMock.randomList,
-        category: AppFaker.word,
+        category: AppFaker.randomCategory,
       );
 
   static List<NewsModel> get randomList => List.generate(
