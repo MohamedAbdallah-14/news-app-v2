@@ -80,4 +80,21 @@ class AppFaker {
 
   static String randomString({int max = maxInt, int min = 1}) =>
       faker.randomGenerator.string(max, min: min);
+
+  static List<String> categories = [
+    'Business',
+    'Entertainment',
+    'General',
+  ];
+
+  static String get randomCategory =>
+      categories[randomInt(max: categories.length)];
+
+  static List<String> randomXCategories(int x) {
+    final list = <String>[];
+    for (var i = 0; i < x; i++) {
+      list.add(categories[i]);
+    }
+    return list;
+  }
 }
