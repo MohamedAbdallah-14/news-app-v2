@@ -14,7 +14,7 @@ class HomeRepository {
     if (mockEnvironment) {
       await Future<void>.delayed(const Duration(milliseconds: 500));
       return Right(
-         NewsResponseModelMock.random,
+        NewsResponseModelMock.random,
       );
     } else {
       final response = await _apIsManager.send(
