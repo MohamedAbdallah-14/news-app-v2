@@ -36,6 +36,7 @@ news should emit lodaing then emit succes when repository returns Right''',
       ),
       NewsState(
         response: NewsResponseModelMock.mock,
+        selectedCategory: NewsResponseModelMock.mock.categories.first,
       ),
     ],
   );
@@ -77,6 +78,24 @@ Given current state is failure when news called and repository returns Right the
       ),
       NewsState(
         response: NewsResponseModelMock.mock,
+        selectedCategory: NewsResponseModelMock.mock.categories.first,
+      ),
+    ],
+  );
+
+
+  blocTest<NewsCubit, NewsState>(
+    '''
+Given current state is success when selectCategory called then emit state with selected category''',
+    build: () => newsCubit,
+    seed: () => NewsState(
+      response: NewsResponseModelMock.mock,
+    ),
+    act: (NewsCubit cubit) => cubit.selectCategory('category'),
+    expect: () => [
+      NewsState(
+        response: NewsResponseModelMock.mock,
+        selectedCategory: 'category',
       ),
     ],
   );
