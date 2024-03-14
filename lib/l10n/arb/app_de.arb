@@ -8,5 +8,7 @@
   "check_your_connection": "Überprüfen Sie Ihre Verbindung",
   "try_again_later": "Versuchen Sie es später erneut",
   "retry": "Wiederholen",
-  "dismiss": "Ablehnen"
+  "dismiss": "Ablehnen",
+  "news": "Nachrichten",
+  "favorite": "Favoriten"
 }
