@@ -45,7 +45,6 @@
         "--web-port=8000"
       ]
     },
-
     {
       "name": "News App mock",
       "request": "launch",

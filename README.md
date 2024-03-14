@@ -24,6 +24,28 @@ dart run build_runner build
 
 There are several launch options for the different flavours (dev, staging and live) added to the launch.json for VSCode and runConfigurations for Android Studio.
 
+## Flavours
+
+The project contains three different flavours:
+
+- **_dev_**: Development flavour
+- **_production_**: Production flavour
+- **_mock_**: Mock flavour
+
+The flavours are defined in the `flavours` directory and the `main.dart` file in the `lib` directory.
+
+## Mock Flavour
+
+The mock flavour is used to run the app with mock data. The mock data is generated using faker package. The mock data is used to test the app without the need of the backend.
+
+to run the app with the mock flavour, use the vscode launch configuration or the following command:
+
+News App mock
+
+```
+flutter run --flavor mock -t lib/main_mock.dart
+```
+
 ## Data Layer
 The data layer is uses an API Manager to manage the API calls. The API Manager is a singleton (defiened by dependancy injection) that is used to make the API calls. The API Manager uses the Dio package to make the API calls. The API Manager is used by the Repository and The Repository is called in the Bloc.
 
