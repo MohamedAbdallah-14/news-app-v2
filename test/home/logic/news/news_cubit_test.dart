@@ -83,7 +83,6 @@ Given current state is failure when news called and repository returns Right the
     ],
   );
 
-
   blocTest<NewsCubit, NewsState>(
     '''
 Given current state is success when selectCategory called then emit state with selected category''',
