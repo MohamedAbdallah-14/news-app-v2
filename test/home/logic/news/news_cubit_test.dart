@@ -29,7 +29,7 @@ news should emit lodaing then emit succes when repository returns Right''',
           .thenAnswer((_) async => Right(NewsResponseModelMock.mock));
     },
     build: () => newsCubit,
-    act: (NewsCubit cubit) => cubit.news(),
+    act: (NewsCubit cubit) => cubit.getNews(),
     expect: () => [
       const NewsState(
         loading: true,
@@ -48,7 +48,7 @@ news should emit lodaing then emit failure when repository returns Left''',
           .thenAnswer((_) async => Left(ConnectionFailure()));
     },
     build: () => newsCubit,
-    act: (NewsCubit cubit) => cubit.news(),
+    act: (NewsCubit cubit) => cubit.getNews(),
     expect: () => [
       const NewsState(
         loading: true,
@@ -70,7 +70,7 @@ Given current state is failure when news called and repository returns Right the
     seed: () => NewsState(
       failure: ConnectionFailure(),
     ),
-    act: (NewsCubit cubit) => cubit.news(),
+    act: (NewsCubit cubit) => cubit.getNews(),
     expect: () => [
       const NewsState(
         loading: true,

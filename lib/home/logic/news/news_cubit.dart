@@ -13,7 +13,7 @@ class NewsCubit extends Cubit<NewsState> {
 
   final HomeRepository _repository;
 
-  Future<void> news() async {
+  Future<void> getNews() async {
     emit(state.requestLoading());
     final result = await _repository.news();
     emit(
@@ -25,11 +25,11 @@ class NewsCubit extends Cubit<NewsState> {
   }
 
   void retry() {
-    news();
+    getNews();
   }
 
   Future<void> reload() async {
     emit(state.copyWith(response: Nullable(null)));
-    await news();
+    await getNews();
   }
 }
