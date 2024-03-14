@@ -4,7 +4,7 @@ import 'package:news_app/core/helpers/generic_error_handler.dart';
 import 'package:news_app/core/view/widgets/app_screen.dart';
 import 'package:news_app/core/view/widgets/language_selector.dart';
 import 'package:news_app/home/logic/news/news_cubit.dart';
-import 'package:news_app/home/view/screen/news_screen.dart';
+import 'package:news_app/home/view/screen/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
           listenWhen: (previous, current) =>
               previous.response != current.response && current.response != null,
           listener: (context, state) {
-            Navigator.pushReplacementNamed(context, NewsScreen.id);
+            Navigator.pushReplacementNamed(context, HomeScreen.id);
           },
         ),
         BlocListener<NewsCubit, NewsState>(
