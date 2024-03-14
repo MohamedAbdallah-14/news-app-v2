@@ -10,5 +10,8 @@
   "retry": "Retry",
   "dismiss": "Dismiss",
   "news": "News",
-  "favorite": "Favorite"
+  "favorite": "Favorite",
+  "favorites": "Favorites",
+  "home": "Home",
+  "back": "Back"
 }
