@@ -16,7 +16,13 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/main_production.dart",
-      "args": ["--target", "lib/main_production.dart"]
+      "args": [
+        "--target",
+        "lib/main_production.dart",
+        "-d",
+        "chrome",
+        "--web-port=8000"
+      ]
     },
     {
       "name": "News App dev",
@@ -31,7 +37,13 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/main_dev.dart",
-      "args": ["--target", "lib/main_dev.dart"]
+      "args": [
+        "--target",
+        "lib/main_dev.dart",
+        "-d",
+        "chrome",
+        "--web-port=8000"
+      ]
     },
 
     {
@@ -46,7 +58,13 @@
       "request": "launch",
       "type": "dart",
       "program": "lib/main_mock.dart",
-      "args": ["--target", "lib/main_mock.dart"]
+      "args": [
+        "--target",
+        "lib/main_mock.dart",
+        "-d",
+        "chrome",
+        "--web-port=8000"
+      ]
     },
     {
       "name": "Profile",
