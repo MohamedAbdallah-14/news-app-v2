@@ -57,9 +57,7 @@ class _LoadingImageState extends State<LoadingImage> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: testMode
-          ? const Text('loading')
-          : Container(
+      child:Container(
               width: 75,
               height: 75,
               decoration: const BoxDecoration(
