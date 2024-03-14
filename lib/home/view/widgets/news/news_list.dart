@@ -60,7 +60,6 @@ class NewsList extends StatelessWidget {
                           return HeadlineCell(
                             key: Key('HeadlineCell$index'),
                             headline: selectedNewsModel.headlines[index],
-                            index: index,
                           );
                         },
                       );
@@ -75,7 +74,6 @@ class NewsList extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return HeadlineCell(
                         key: Key('HeadlineCell$index'),
-                        index: index,
                         headline: selectedNewsModel.headlines[index],
                       );
                     },
