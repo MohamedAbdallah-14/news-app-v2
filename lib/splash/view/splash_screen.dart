@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/helpers/app_colors.dart';
 import 'package:news_app/core/helpers/generic_error_handler.dart';
 import 'package:news_app/core/view/widgets/app_screen.dart';
 import 'package:news_app/core/view/widgets/language_selector.dart';
