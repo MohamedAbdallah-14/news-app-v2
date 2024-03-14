@@ -1,0 +1,40 @@
+{
+  "app": "news_app",
+  "feature": "home",
+  "name": "headline_model",
+  "response_model": false,
+  "parameters": [
+    {
+      "parameter": "id",
+      "field": "id",
+      "type": "int",
+      "custom": false,
+      "list": false,
+      "fake_id": true
+    },
+    {
+      "parameter": "title",
+      "field": "title",
+      "type": "String",
+      "custom": false,
+      "list": false,
+      "fake_word": true
+    },
+    {
+      "parameter": "description",
+      "field": "description",
+      "type": "String",
+      "custom": false,
+      "list": false,
+      "fake_sentence": true
+    },
+    {
+      "parameter": "favorite",
+      "field": "favorite",
+      "type": "bool",
+      "custom": false,
+      "list": false,
+      "fake_bool": true
+    }
+  ]
+}

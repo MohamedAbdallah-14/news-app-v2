@@ -1,0 +1,17 @@
+{
+  "@@locale": "de",
+  "language": "Sprache",
+  "error": "Fehler",
+  "success": "Erfolg",
+  "no_connection": "Keine Verbindung",
+  "service_not_available": "Dienst nicht verfügbar",
+  "check_your_connection": "Überprüfen Sie Ihre Verbindung",
+  "try_again_later": "Versuchen Sie es später erneut",
+  "retry": "Wiederholen",
+  "dismiss": "Ablehnen",
+  "news": "Nachrichten",
+  "favorite": "Favoriten",
+  "favorites": "Favoriten",
+  "home": "Startseite",
+  "back": "Zurück"
+}
