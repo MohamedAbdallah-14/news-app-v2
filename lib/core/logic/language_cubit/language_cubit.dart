@@ -4,8 +4,6 @@ import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 part 'language_state.dart';
 
-bool ltr = false;
-
 class LanguageCubit extends HydratedCubit<LanguageState> {
   LanguageCubit() : super(const LanguageState());
 
@@ -29,7 +27,6 @@ class LanguageCubit extends HydratedCubit<LanguageState> {
 
   @override
   Map<String, dynamic>? toJson(LanguageState state) {
-    ltr = state.languageCode == 'en';
     return state.toMap();
   }
 }

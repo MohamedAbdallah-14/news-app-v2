@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app/core/helpers/breakpoints.dart';
 import 'package:news_app/core/view/widgets/responsive_padding.dart';
-import 'package:news_app/home/logic/news/news_cubit.dart';
+import 'package:news_app/home/logic/favorites/favorites_cubit.dart';
 import 'package:news_app/home/view/widgets/news/headline_cell.dart';
+import 'package:news_app/l10n/l10n.dart';
 
-class NewsList extends StatelessWidget {
-  const NewsList({
+class FavoritesList extends StatelessWidget {
+  const FavoritesList({
     super.key = const Key('HeadlineList'),
   });
 
@@ -18,12 +19,8 @@ class NewsList extends StatelessWidget {
         key: const Key('HeadlineListResponsivePadding'),
         mobilePadding: const EdgeInsets.symmetric(horizontal: 16),
         tabletPadding: const EdgeInsets.symmetric(horizontal: 48),
-        child: BlocBuilder<NewsCubit, NewsState>(
+        child: BlocBuilder<FavoritesCubit, FavoritesState>(
           builder: (context, state) {
-            final selectedNewsModel = state.selectedNewsModel;
-            if (selectedNewsModel == null) {
-              return const SizedBox();
-            }
             return Column(
               key: const Key('HeadlineListColumn'),
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -36,7 +33,7 @@ class NewsList extends StatelessWidget {
                   ),
                   child: Text(
                     key: const Key('HeadlineListSubCategoryText'),
-                    selectedNewsModel.category,
+                    context.l10n.favorites,
                     style: Theme.of(context).textTheme.displaySmall,
                   ),
                 ),
@@ -51,7 +48,7 @@ class NewsList extends StatelessWidget {
                         key: const Key('HeadlineListGridView'),
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemCount: selectedNewsModel.headlines.length,
+                        itemCount: state.headlines.length,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
                           childAspectRatio: cellWidth / 210,
@@ -59,7 +56,7 @@ class NewsList extends StatelessWidget {
                         itemBuilder: (context, index) {
                           return HeadlineCell(
                             key: Key('HeadlineCell$index'),
-                            headline: selectedNewsModel.headlines[index],
+                            headline: state.headlines[index],
                           );
                         },
                       );
@@ -70,11 +67,11 @@ class NewsList extends StatelessWidget {
                     key: const Key('HeadlineListListView'),
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
-                    itemCount: selectedNewsModel.headlines.length,
+                    itemCount: state.headlines.length,
                     itemBuilder: (context, index) {
                       return HeadlineCell(
                         key: Key('HeadlineCell$index'),
-                        headline: selectedNewsModel.headlines[index],
+                        headline: state.headlines[index],
                       );
                     },
                   ),

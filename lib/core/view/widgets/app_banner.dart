@@ -18,11 +18,8 @@ class AppBanner extends StatelessWidget {
   });
 
   final Widget? child;
-
   final String message;
-
   final BannerLocation location;
-
   final Color color;
 
   @override

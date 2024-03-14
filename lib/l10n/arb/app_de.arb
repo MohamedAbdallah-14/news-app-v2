@@ -10,5 +10,8 @@
   "retry": "Wiederholen",
   "dismiss": "Ablehnen",
   "news": "Nachrichten",
-  "favorite": "Favoriten"
+  "favorite": "Favoriten",
+  "favorites": "Favoriten",
+  "home": "Startseite",
+  "back": "Zurück"
 }
