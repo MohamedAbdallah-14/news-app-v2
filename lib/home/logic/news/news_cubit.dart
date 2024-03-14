@@ -5,6 +5,7 @@ import 'package:news_app/core/data/api_manager/api_manager.dart';
 import 'package:news_app/core/helpers/nullable.dart';
 import 'package:news_app/home/data/home_repository.dart';
 import 'package:news_app/home/data/model/news/news_response_model.dart';
+import 'package:news_app/home/data/model/news_model/news_model.dart';
 
 part 'news_state.dart';
 
@@ -31,5 +32,9 @@ class NewsCubit extends Cubit<NewsState> {
   Future<void> reload() async {
     emit(state.copyWith(response: Nullable(null)));
     await getNews();
+  }
+
+  void selectCategory(String category) {
+    emit(state.copyWith(selectedCategory: category));
   }
 }

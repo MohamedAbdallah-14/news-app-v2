@@ -6,14 +6,29 @@ class NewsState extends Equatable {
     this.loading = false,
     this.failure,
     this.response,
+    this.selectedCategory,
   });
 
   final bool loading;
   final Failure? failure;
   final NewsResponseModel? response;
+  final String? selectedCategory;
 
-  NewsState requestSuccess(NewsResponseModel response) =>
-      copyWith(loading: false, response: Nullable(response));
+  NewsModel? get selectedNewsModel => response?.news.firstWhere(
+        (element) => element.category == selectedCategory,
+        orElse: () => const NewsModel(
+          category: '',
+          headlines: [],
+        ),
+      );
+
+  List<String>? get categories => response?.categories;
+
+  NewsState requestSuccess(NewsResponseModel response) => copyWith(
+        loading: false,
+        response: Nullable(response),
+        selectedCategory: response.categories.first,
+      );
 
   NewsState requestFailed(Failure failure) =>
       copyWith(loading: false, failure: Nullable(failure));
@@ -28,11 +43,13 @@ class NewsState extends Equatable {
     bool? loading,
     Nullable<Failure?>? failure,
     Nullable<NewsResponseModel?>? response,
+    String? selectedCategory,
   }) {
     return NewsState(
       loading: loading ?? this.loading,
       failure: failure == null ? this.failure : failure.value,
       response: response == null ? this.response : response.value,
+      selectedCategory: selectedCategory ?? this.selectedCategory,
     );
   }
 
@@ -41,6 +58,7 @@ class NewsState extends Equatable {
         loading,
         failure,
         response,
+        selectedCategory,
       ];
 
   @override
